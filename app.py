@@ -29,7 +29,38 @@ def registration():
             )
         conn.commit()
     return render_template('redirect.html')
-            
+
+@app.route("/browse/<name>", methods=['GET', 'POST'])
+def business(name):
+    db.execute('SELECT city, name, phone, email, website, description FROM registrants WHERE name = ?', (name,))
+    tempinfo = db.fetchone()
+    
+    business = {
+        'city': tempinfo[0],
+        'name': tempinfo[1],
+        'phone': tempinfo[2],
+        'email': tempinfo[3],
+        'website': tempinfo[4],
+        'description': tempinfo[5] 
+    }
+
+    return render_template('generalbusiness.html', business=business)
+
+@app.route('/businesses', methods=['GET'])
+def businesses():
+    db.execute('SELECT * FROM registrants')
+    tempinfo = db.fetchall()
+    businesses = [{
+        'city': business[0],
+        'name': business[1],
+        'phone': business[2],
+        'email': business[3],
+        'website': business[4],
+        'description': business[5]
+    } for business in tempinfo]
+    print(businesses)
+    return render_template('business.html', businesses=businesses)
+
 if __name__ == "__main__":
     app.debug = True
     app.run()
