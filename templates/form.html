@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Business Registration</title>
+
+        <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../static/signup.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="content">
+        <h2>Business Registration</h2>
+
+        <form class="registration" action="/registration" method="POST">            
+            <label>City:</label><br>
+            <select name = "cities" id="city">
+                <option value = "Toronto">Toronto</option>
+                <option value = "Ottawa">Ottawa</option>
+                <option value = "Brampton">Brampton</option>
+                <option value = "Hamilton">Hamilton</option>
+                <option value = "London">London</option>
+                <option value = "Kitchener">Kitchener</option>
+                <option value = "Windsor">Windsor</option>
+                <option value = "Mississauga">Mississauga</option>
+            </select><br><br>
+
+            <label for="name" required>Name of Business:</label><br>
+            <input type = "text" id="name" name="name"><br><br>
+            
+            <label for="phone">Phone #:</label><br>
+            <input type = "text" id="phone" name="phone"><br><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            
+            <label for="website">Website:</label><br>
+            <input type = "url" id="website" name="website"><br><br>
+            
+            <label for="description">Tell us more about your business:</label><br>
+            <input type = "text" id="description" name="description" style="height:300px;width:600px;"><br><br>
+            
+            <button id="SubmitForm" type="submit">Submit Form</button>
+        </form>
+        </div>
+    </body>
+</html>
