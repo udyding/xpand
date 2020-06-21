@@ -1,0 +1,35 @@
+body{
+    background-color: #08080818;
+    line-height: 1.6em;
+    margin: 0.2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+#header1{
+    text-align: center;
+}
+
+.container{
+   width: 75%;
+}
+
+.pp{
+    background-color: #b1a6f118;
+    border: 1px solid black;
+}
+
+.splash{
+    background-color: #b1a6f118;
+    border: 1px solid black;
+}
+
+.39spices {
+    background-color: #b1a6f118;
+    border: 1px solid black;
+}
+
+.tjfauto {
+    background-color: #b1a6f118;
+    border: 1px solid black;
+}
