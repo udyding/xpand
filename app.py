@@ -50,19 +50,22 @@ def business(name):
 
     return render_template('generalbusiness.html', business=business)
 
-@app.route('/businesses', methods=['GET'])
-def businesses():
-    db.execute('SELECT * FROM registrants')
+@app.route('/businesses/<city>', methods=['GET'])
+def businesses(city):
+    if not city:
+        db.execute('SELECT * FROM registrants')        
+    else:
+        db.execute('SELECT * FROM registrants where city=?', (city,))
+
     tempinfo = db.fetchall()
     businesses = [{
-        'city': business[0],
-        'name': business[1],
-        'phone': business[2],
-        'email': business[3],
-        'website': business[4],
-        'description': business[5]
-    } for business in tempinfo]
-    print(businesses)
+            'city': business[0],
+            'name': business[1],
+            'phone': business[2],
+            'email': business[3],
+            'website': business[4],
+            'description': business[5]
+        } for business in tempinfo]
     return render_template('business.html', businesses=businesses)
 
 if __name__ == "__main__":
