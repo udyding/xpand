@@ -110,53 +110,53 @@ nav ul li ul li a:hover{
   overflow: hidden;
 }
 .btn1{
-  background-image: url(img/toronto.jpg);
+  background-image: url(../images/toronto.jpg);
   opacity: 0.75;
   background-size: cover;
   background-position-y:-45px;
   text-decoration: none;
 }
 .btn2{
-  background-image: url(img/ottawa.jpg);
+  background-image: url(./images/ottawa.jpg);
   opacity: 0.75;
   background-size: cover;
 }
 .btn3{
-  background-image: url(img/brampton.jpg);
+  background-image: url(./images/brampton.jpg);
   opacity: 0.75;
   background-size: cover;
   background-position-y:-45px ;
 }
 .btn4{
-  background-image: url(img/hamilton.jpg);
+  background-image: url(./images/hamilton.jpg);
   opacity: 0.75;
   background-size: cover;
 }
 .btn5{
-  background-image: url(img/london.jpg);
+  background-image: url(./images/london.jpg);
   opacity: 0.75;
   background-size: cover;
   background-position:center ;
 }
 .btn6{
-  background-image: url(img/vaughan.jpg);
+  background-image: url(./images/vaughan.jpg);
   opacity: 0.75;
   background-size: cover;
   background-position:center ;
 }
 .btn7{
-  background-image: url(img/kitchner.jpg);
+  background-image: url(./images/kitchner.jpg);
   opacity: 0.75;
   background-size: cover;
 }
 .btn8{
-  background-image: url(img/windsor.jpg);
+  background-image: url(./images/windsor.jpg);
   opacity: 0.75;
   background-size: cover;
   background-position:center ;
 }
 .btn9{
-  background-image: url(img/mississauga.jpg);
+  background-image: url(./images/mississauga.jpg);
   opacity: 0.75;
   background-size: cover;
   background-position:-45;

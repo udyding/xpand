@@ -8,7 +8,11 @@ db = conn.cursor()
 
 @app.route("/")
 def home():
-    return "Hello! this is the main page"
+    return render_template('homepage.html')
+
+@app.route("/browse")
+def browse():
+    return render_template('browse.html')
 
 @app.route("/showRegistration")
 def showRegistration():
